@@ -1,0 +1,103 @@
+{
+ "anchor": [
+  8,
+  96
+ ],
+ "anchor_hz": 750,
+ "anchor_s": 0.26,
+ "zone_end": 40,
+ "zone_freq": 120,
+ "fan_out": 10,
+ "example": [
+  {
+   "t2": 13,
+   "f2": 48,
+   "dt": 5,
+   "hash": 3148805,
+   "f2_hz": 375,
+   "in_song": false
+  },
+  {
+   "t2": 13,
+   "f2": 144,
+   "dt": 5,
+   "hash": 3154949,
+   "f2_hz": 1125,
+   "in_song": false
+  },
+  {
+   "t2": 22,
+   "f2": 102,
+   "dt": 14,
+   "hash": 3152270,
+   "f2_hz": 797,
+   "in_song": true
+  },
+  {
+   "t2": 22,
+   "f2": 204,
+   "dt": 14,
+   "hash": 3158798,
+   "f2_hz": 1594,
+   "in_song": true
+  },
+  {
+   "t2": 32,
+   "f2": 48,
+   "dt": 24,
+   "hash": 3148824,
+   "f2_hz": 375,
+   "in_song": false
+  },
+  {
+   "t2": 34,
+   "f2": 13,
+   "dt": 26,
+   "hash": 3146586,
+   "f2_hz": 102,
+   "in_song": true
+  },
+  {
+   "t2": 42,
+   "f2": 43,
+   "dt": 34,
+   "hash": 3148514,
+   "f2_hz": 336,
+   "in_song": false
+  },
+  {
+   "t2": 42,
+   "f2": 86,
+   "dt": 34,
+   "hash": 3151266,
+   "f2_hz": 672,
+   "in_song": false
+  },
+  {
+   "t2": 42,
+   "f2": 136,
+   "dt": 34,
+   "hash": 3154466,
+   "f2_hz": 1062,
+   "in_song": true
+  },
+  {
+   "t2": 43,
+   "f2": 171,
+   "dt": 35,
+   "hash": 3156707,
+   "f2_hz": 1336,
+   "in_song": false
+  }
+ ],
+ "by_row": 131,
+ "by_hash": 0.57,
+ "clip_stars": 95,
+ "clip_hashes": 720,
+ "entries": 581012,
+ "per_song": 5810,
+ "distinct": 401959,
+ "mb": 4.6,
+ "pair_kept": 0.053,
+ "possible": 16777216
+}

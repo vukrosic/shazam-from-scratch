@@ -1,0 +1,73 @@
+440 Hz, first 10 samples: [0.0, 0.339, 0.637, 0.861, 0.982, 0.988, 0.876, 0.661, 0.368, 0.031]
+song 17: 240,000 samples, {'seed': 17, 'bpm': 137, 'root': 55, 'scale': 'major'}
+song at 12 s: [-0.059, -0.139, -0.14, -0.061, 0.086, 0.182, 0.141, 0.074]
+phone clip  : [-0.038, -0.025, -0.113, -0.003, 0.027, 0.05, 0.035, 0.017]
+equal samples at the right place: noisy clip 3 of 40,000, quiet clip 2 of 40,000
+best of 2000 positions near 12 s: sample 96000 (right answer 96000)
+200,001 positions x 40,000 = 8,000,040,000 multiplications per song, 0.3 s per song
+100 songs: 0.5 min; 1.8 million songs: 7 days
+samples: [0.0, 1.17, 0.65, 0.52, 0.5, -0.9, -1.35, -0.25, 0.0, 0.25, 1.35, 0.9, -0.5, -0.52, -0.65, -1.17]
+strength at 0..8 turns: [0.0, 0.0, 8.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0]
+test wave 2 turns -> 8.0  3 turns -> 0.0
+1024 samples: slow 1,048,576 multiplications 15 ms, fast 5,120 multiplications 3.0 ms, largest difference 2.7e-11
+spectrogram of song 17: (512, 934) rows x slices in 0.04 s with the fast way; the slow way would take about 14 s
+slice at 12.51 s, loudest rows [13, 96, 12] [102, 750, 94] Hz
+song 17: 634 peaks in 30 s = 21 per second (out of 478,208 points in the spectrogram)
+noise None dB: clip has 109 peaks, 100% of the song peaks are still there
+noise 0 dB: clip has 95 peaks, 23% of the song peaks are still there
+noise -3 dB: clip has 91 peaks, 15% of the song peaks are still there
+noise -6 dB: clip has 87 peaks, 10% of the song peaks are still there
+noise -9 dB: clip has 82 peaks, 6% of the song peaks are still there
+slide over song 17: best shift 375 slices = 12.00 s, 24 stars line up; typical shift 0
+slide over all 100 songs: 0.5 s, best songs [(17, 24), (78, 5), (34, 4), (39, 4), (92, 4)]
+at that speed, 1.8 million songs: 2.3 hours per question
+test: 20 of 20 clips named correctly by sliding stars
+anchor star: slice 8 (0.26 s), row 96 (750 Hz)
+  partner row 48 (375 Hz), 5 slices later -> hash 3,148,805
+  partner row 144 (1125 Hz), 5 slices later -> hash 3,154,949
+  partner row 102 (797 Hz), 14 slices later -> hash 3,152,270
+look up one star by its row: 131 places in the library on average
+look up one pair by its hash: 0.57 places on average
+clip: 95 stars -> 720 hashes
+library: 100 songs, 581,012 entries (5,810 per song), 401,959 different hashes, 4.6 MB at 8 bytes per entry
+pairs of the song that are still in the noisy clip: 5%
+clip: 720 hashes, 144 found in the table, 408 votes
+  song 17: 49 votes at a difference of 375 slices (12.00 s)
+  song 78: 2 votes at a difference of 487 slices (15.58 s)
+  song 46: 2 votes at a difference of -75 slices (-2.40 s)
+  song 33: 2 votes at a difference of 272 slices (8.70 s)
+  song 20: 2 votes at a difference of 701 slices (22.43 s)
+song 17: votes spread over 70 differences, tallest 49; song 78: tallest 2
+one search over 100 songs: 16 ms (fingerprint of the clip included)
+a song not in the library: best 3 votes -> answer no match
+two songs playing at once (17 and 64): [(108, 17, 375), (70, 64, 94), (3, 78, -63)]
+test: 20 of 20 clips named correctly
+ 1 s, noise None dB: right 36/40, no match  4, wrong 0
+ 1 s, noise    0 dB: right  9/40, no match 31, wrong 0
+ 1 s, noise   -3 dB: right  3/40, no match 37, wrong 0
+ 1 s, noise   -6 dB: right  3/40, no match 37, wrong 0
+ 1 s, noise   -9 dB: right  0/40, no match 40, wrong 0
+ 2 s, noise None dB: right 40/40, no match  0, wrong 0
+ 2 s, noise    0 dB: right 29/40, no match 11, wrong 0
+ 2 s, noise   -3 dB: right 28/40, no match 12, wrong 0
+ 2 s, noise   -6 dB: right 12/40, no match 28, wrong 0
+ 2 s, noise   -9 dB: right  4/40, no match 36, wrong 0
+ 3 s, noise None dB: right 40/40, no match  0, wrong 0
+ 3 s, noise    0 dB: right 36/40, no match  4, wrong 0
+ 3 s, noise   -3 dB: right 36/40, no match  4, wrong 0
+ 3 s, noise   -6 dB: right 24/40, no match 16, wrong 0
+ 3 s, noise   -9 dB: right  5/40, no match 35, wrong 0
+ 5 s, noise None dB: right 40/40, no match  0, wrong 0
+ 5 s, noise    0 dB: right 39/40, no match  1, wrong 0
+ 5 s, noise   -3 dB: right 38/40, no match  2, wrong 0
+ 5 s, noise   -6 dB: right 28/40, no match 12, wrong 0
+ 5 s, noise   -9 dB: right  8/40, no match 29, wrong 3
+10 s, noise None dB: right 40/40, no match  0, wrong 0
+10 s, noise    0 dB: right 40/40, no match  0, wrong 0
+10 s, noise   -3 dB: right 40/40, no match  0, wrong 0
+10 s, noise   -6 dB: right 37/40, no match  2, wrong 1
+10 s, noise   -9 dB: right 25/40, no match 15, wrong 0
+100 songs that are not in the library: 0 wrongly named
+pack(96, 48, 5) = 3148805
+best: (17, 375, 49)
+all tests passed
